@@ -1,0 +1,150 @@
+@import "../../global.scss";
+
+.intro{
+    background: radial-gradient(#5e5959, #2f6389);
+    display: flex;
+    overflow: hidden;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left{
+        flex:0.5;
+        overflow: hidden;
+
+        .imgContainer{
+            width: 660px;
+            height: 660px;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            float: right;
+
+            @include mobile{
+                align-items: flex-start;
+            }
+
+            img{
+                height: 100%;
+
+                @include mobile{
+                    height: 50%;
+                }
+            }
+        }
+    }
+    
+    .right{
+        flex: 0.5;
+
+        .wrapper{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            
+
+            @include mobile{
+                padding-left: 0;
+                align-items: center;
+            }
+
+            h1{
+                font-size: 60px;
+                margin: 10px 0;
+                @include mobile{
+                    font-size: 40px;
+
+                }
+            }
+            h2{
+                font-size: 35px;
+            }
+            h3{
+                font-size: 30px;
+                
+
+        @keyframes arrowBlink{
+            100%{
+                opacity: 0;
+            }
+        }
+
+                @include mobile{
+                    font-size: 20px;
+                    
+                }
+
+                span{
+                    font-size: inherit;
+                    color: rgb(18, 18, 82);
+                }
+
+                .ityped-cursor {
+                    animation: blink 1s infinite;
+                }
+                @keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                }
+            }
+
+        }
+
+        .content {
+            position: absolute;
+                left: 50%;
+                bottom:-30px;
+                transform: translate(-50%, -50%);
+                animation: arrowBlink 1.2s infinite;
+        }
+
+/* Arrow & Hover Animation */
+        #more-arrows {
+            width: 75px;
+            height: 65px;
+            &:hover {
+            
+            polygon {
+            fill: $mainColor;
+            transition: all 1.5s ease-out;
+
+            &.arrow-bottom {
+                transform: translateY(-18px);
+            }
+
+            &.arrow-top {
+                transform: translateY(18px);
+            }
+            
+            }
+        
+        }
+        
+        }
+
+        polygon {
+        fill: #FFF;
+        transition: all .2s ease-out;
+    
+            &.arrow-middle {
+	        opacity: 0.75;
+	        }
+
+	        &.arrow-top {
+	        opacity: 0.5
+	        }
+    
+        }
+    }   
+}

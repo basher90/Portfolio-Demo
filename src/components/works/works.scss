@@ -1,0 +1,196 @@
+@import "../../global.scss";
+
+.works{
+    background: radial-gradient(#c4c4c4,#5988aa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .arrow{
+        width: 75px;
+        height: 65px;
+        position: absolute;
+        overflow: hidden;
+        cursor: pointer;
+
+        @include mobile{
+            display: none;
+        }
+
+        &.left{
+            left: 100px;
+            transform: rotate(90deg);
+        }
+        &.right{
+            right: 100px;
+            transform: rotate(-90deg);
+        }
+        &.middle{
+            top: 85%;
+            left: 47.2%;
+        }
+        .content {
+            position: absolute;
+            left: 74.5%;
+            top: 66%;
+            transform: translate(-50%, -50%);
+            animation: arrowBlink 1.2s infinite;
+        }
+
+        @keyframes arrowBlink{
+            100%{
+                opacity: 0;
+            }
+        }
+        #more-arrows {
+            width: 75px;
+            height: 65px;
+            &:hover {
+            
+            polygon {
+            fill: $mainColor;
+            transition: all 1.5s ease-out;
+
+            &.arrow-bottom {
+                transform: translateY(-18px);  
+            }
+            &.arrow-top {
+                transform: translateY(18px);
+            }
+
+            }
+        }
+        }
+        
+        polygon {
+        fill: #fff;
+        transition: all .2s ease-in-out;
+            
+            &.arrow-midle {
+                opacity: 0.75;
+            }
+
+            &.arrow-top {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .slider{
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-out;
+
+        @include mobile{
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .item{
+                width: 700px;
+                height: 100%;
+                background-color: rgb(255, 255, 255);
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include mobile{
+                    width: 90%;
+                    height: 130px;
+                    margin: 5px 0;
+                }
+
+                .left{
+                    flex:4;
+                    height: 80%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+
+                    .leftContainer{
+                        width: 90%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        @include mobile{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        
+                        imgContainer{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background-color: lightblue;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            @include mobile{
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                            img{
+                                width: 25px;
+
+                                @include mobile{
+                                    width: 15px;
+                                }
+                            }
+                            
+                        }
+
+                        h2{
+                            font-size: 20px;
+                            font-family: 'Courier New', Courier, monospace;
+                            @include mobile{
+                                font-size: 13px;
+                            }
+                        }
+                        p{
+                            font-size: 13px;
+                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                            @include mobile{
+                                display: none;
+                            }
+                        }
+                        span{
+                            font-size: 12px;
+                            font-weight: 600;
+                            text-decoration: underline;
+                            cursor: pointer;
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                    }
+                }.right{
+                    flex:8;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+
+                    img{
+                        width: 400px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
